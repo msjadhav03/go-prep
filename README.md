@@ -40,20 +40,20 @@
 
 ### Features of Go
 
-1. Simplicity - Emphasizes simplicity and readability
-2. Concurrency - Includes built in support for cocurrent programming
-3. Efficiency - Compiles to machine code, resulting efficient and performant executables
-4. Garbage Collection - manages memory allocation and deallocation
-5. Static Typing - Variable types are checked at compile time
-6. Standard Liabrary - Provides essential packages for tasks like handling I/O, networking, data manipulation and more
-7. Open Source - fostering community collaboration and contributions
-8. Cross-Platform - Support various platforms, making suitable for developing application that can run on different Operating Systems
-9. Compiled - Compiles to native machine code
-10. Modern Language Support - Incorporates modern programming language features
+1. `Simplicity` - Emphasizes simplicity and readability
+2. `Concurrency` - Includes built in support for cocurrent programming
+3. `Efficiency` - Compiles to machine code, resulting efficient and performant executables
+4. `Garbage Collection` - manages memory allocation and deallocation
+5. `Static Typing` - Variable types are checked at compile time
+6. `Standard Liabrary` - Provides essential packages for tasks like handling I/O, networking, data manipulation and more
+7. `Open Source` - fostering community collaboration and contributions
+8. `Cross-Platform` - Support various platforms, making suitable for developing application that can run on different Operating Systems
+9. `Compiled` - Compiles to native machine code
+10. `Modern Language Support` - Incorporates modern programming language features
 
 ## what is Go?
 
-    Open Source Programming Language developed by Google. Designed with focus on simplicity, efficiency and concurrency
+Open Source Programming Language developed by Google. Designed with focus on simplicity, efficiency and concurrency
 
 ## Installation
 
