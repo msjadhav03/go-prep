@@ -33,11 +33,59 @@
 
 ## Introduction
 
-## What is Go?
+- Open source Programming Language
+- Developed By Google
+- Designed with Focus on `Simplicity`, `efficiency` and `Concurrency`.
+- Provides Robust toolset to build reliable and efficient software
+
+### Features of Go
+
+1. Simplicity - Emphasizes simplicity and readability
+2. Concurrency - Includes built in support for cocurrent programming
+3. Efficiency - Compiles to machine code, resulting efficient and performant executables
+4. Garbage Collection - manages memory allocation and deallocation
+5. Static Typing - Variable types are checked at compile time
+6. Standard Liabrary - Provides essential packages for tasks like handling I/O, networking, data manipulation and more
+7. Open Source - fostering community collaboration and contributions
+8. Cross-Platform - Support various platforms, making suitable for developing application that can run on different Operating Systems
+9. Compiled - Compiles to native machine code
+10. Modern Language Support - Incorporates modern programming language features
+
+## what is Go?
+
+    Open Source Programming Language developed by Google. Designed with focus on simplicity, efficiency and concurrency
 
 ## Installation
 
+1. Dowload go binary
+
+```url
+https://go.dev/dl/
+```
+
+2. Extract Binary
+
+```bash
+tar -xzf binarytar.tar.gz
+```
+
+3. Set Environment Variable
+
+```bash
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+```
+
+4. Verify Installation
+
+```bash
+go version
+```
+
 ## Visual Studio Code Extensions for Go
+
+Go extension maintained by Google Team
 
 ## Create first Application
 
@@ -171,6 +219,21 @@ In above example
 
 ## Input Scan()
 
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main(){
+    var userTicket int
+    fmt.Println("Please enter number of tickets you want to book")
+    fmt.Scan(&userTicket)
+    fmt.Println("You have Successfully booked %v no of tickets",userTicket)
+}
+```
+
 ## Data Type
 
 Following is the list of data types in Go-lang
@@ -189,15 +252,191 @@ Pointer points to the address of another variable.
 
 ## Array
 
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main(){
+    fmt.Println("Welcome to Ticket Booking application")
+}
+```
+
 ## Slice
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main(){
+    fmt.Println("Welcome to Ticket Booking application")
+}
+```
 
 ## Loops
 
+Go has only one looping statement that is `for`.
+Looping statements are concerned to run set of instruction repeteadly.
+
+`main.go`
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main(){
+    counter:=1
+    fmt.Println("Welcome to Ticket Booking application")
+    for {
+        fmt.Println("Counter Value %v",counter)
+        counter = counter + 1
+        if(counter == 5)
+        {
+            break;
+        }
+    }
+}
+```
+
+In above example for implements `infinite loop`
+
+`main.go`
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main(){
+    counter:=1
+    fmt.Println("Welcome to Ticket Booking application")
+    for counter > 6{
+        fmt.Println("Counter Value %v",counter)
+        counter = counter + 1
+    }
+}
+```
+
+In above example for have some condition, after that for condition goes to false, for exexution stops.
+
 ## break
+
+It is used to terminate the execution of a loop prematurely.
+`break` in loop is used to exit the loop.
+`break` is applicable in for loop and switch statements only.
+
+`main.go`
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main(){
+    counter:=1
+    fmt.Println("Welcome to Ticket Booking application")
+    for {
+        fmt.Println("Counter Value %v",counter)
+        counter = counter + 1
+        if(counter == 5)
+        {
+            break;
+        }
+    }
+}
+```
+
+Here, we have defined for loop without condition which determines, that loop is infinite loop.
+
+```go
+for {
+// code to be executed repeteadly
+}
+
+for true{
+// code to be executed repeteadly
+}
+// both of the above statement mean same thing
+```
 
 ## continue
 
+`continue` used to skip the current iteration of the loop and move to next iteration.
+Commonly used to skip the certain steps of the loop execution.
+
+`main.go`
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    for i := 1; i <= 5; i++ {
+        if i == 3 {
+            continue // Skip the rest of the loop for i equals 3
+        }
+        fmt.Println(i)
+    }
+}
+```
+
+Above example will skip the priniting i value when value of will be 3
+
 ## Package "strings"
+
+`strings` package provides collection of functions for manipulating and working with strings.
+`strings` package is part of standard liabrary
+
+#### Following is the list of commonly used packages
+
+- len(str) : String Length - returns length of the string. `lengthOfString := strings.len(userName)`
+
+```go
+username := "Manisha"
+lengthOfString := string.len(userName)
+```
+
+- String Checking : strings.Contains() - checks if strings conatins a specified substring or nor
+
+```go
+email := "manishajadhav2323@gmail.com"
+isValidEmail := strings.Contains(email, "@")
+fmt.Print(isValidEmail)
+```
+
+```go
+package main
+
+import (
+"fmt"
+)
+
+func main(){
+    fmt.Println("Welcome to Ticket Booking application")
+    email := "manishajadhav2323@gmail.com"
+    isValidEmail := strings.Contains(email, "@")
+    if !isValidEmail{
+        fmt.Println("Incorrect Email ID")
+    }else
+    {
+        fmt.Println("Ticket has been booked Successfully")
+    }
+}
+
+```
 
 ## If...Else
 
@@ -232,7 +471,46 @@ else {
 
 ## Operators
 
+Supports variety of operators for performing different types of operations
+
+| Name                        | Symbols                           |
+| --------------------------- | --------------------------------- |
+| Arithmetic Operator         | `+, -, *, /, %`                   |
+| Assignement Operator        | `=,  +=, -=, *=, /=, %=`          |
+| Comparison Operator         | `==, !=, <, >, <=, >=`            |
+| Logical Operator            | `&&, logical or , !`              |
+| Unary Operators             | `+, -, ++, --`                    |
+| Bitwise Operator            | `&,   or opertor, ^, <<, >>`      |
+| Bitwise Assignment Operator | `&=,  or operator=, ^=, <<=, >>=` |
+| Other Operator              | `&, *, ., ->, [], ()`             |
+
 ## Switch Statements
+
+Used for making decisions based on different set possible values
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    day := "Wednesday"
+
+    switch day {
+    case "Monday":
+        fmt.Println("It's Monday!")
+    case "Tuesday":
+        fmt.Println("It's Tuesday!")
+    case "Wednesday":
+        fmt.Println("It's Wednesday!")
+    default:
+        fmt.Println("It's another day.")
+    }
+}
+
+```
+
+In above example it checks day match case. As case matches with `Wednesday`, it will print `It's Wednesday`
 
 ## Function in Go
 
