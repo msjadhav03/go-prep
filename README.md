@@ -1,5 +1,10 @@
 # Go
 
+<p>  
+    <img src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png" alt="Go Logo" height="260">
+</p>
+
+# Contents
 1. [Introduction](#intro)
 2. [what is Go?](#what)
 3. [Installation](#install)
@@ -51,7 +56,7 @@
 9. `Compiled` - Compiles to native machine code
 10. `Modern Language Support` - Incorporates modern programming language features
 
-## what is Go?
+## What is Go?
 
 Open Source Programming Language developed by Google. Designed with focus on simplicity, efficiency and concurrency
 
